@@ -1,0 +1,38 @@
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+label {
+    display: block;
+}
+
+.tip-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 960px; 
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+
+.tip-perc {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 10px;
+    margin: 25px 0 25px;
+}
+
+.tip-input {
+    font-size: 24px;
+}
+
+
+@media (mid-width: 900px) {
+
+}

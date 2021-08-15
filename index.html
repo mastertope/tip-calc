@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="app.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Bill
+  <div class="tip-table">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <div class="tip-details">
+      <label for="bill">Bill</label>
+      <input type="text" name="bill" id="bill" class="tip-input">
 
-  Number of People
+      <label for="">Select Tip %</label>
+      <div class="tip-options">
+        <button type="submit" class="tip-perc">5%</button>
+        <button type="submit" class="tip-perc">10%</button>
+        <button type="submit" class="tip-perc">15%</button>
+        <button type="submit" class="tip-perc">25%</button>
+        <button type="submit" class="tip-perc">50%</button>
+        <button type="submit" class="tip-perc">Custom</button>
+      </div>
 
-  Tip Amount
-  / person
+      
 
-  Total
-  / person
+    </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="tip-details">
+      <label for="bill">Bill</label>
+      <input type="text" name="bill" id="bill" class="tip-input">
+
+      <label for="">Select Tip %</label>
+      <div class="tip-panel">
+        <button type="submit" class="tip-perc">5%</button>
+        <button type="submit" class="tip-perc">10%</button>
+        <button type="submit" class="tip-perc">15%</button>
+        <button type="submit" class="tip-perc">25%</button>
+        <button type="submit" class="tip-perc">50%</button>
+        <button type="submit" class="tip-perc">Custom</button>
+      </div>
+
+    </div>
+
   </div>
+
 </body>
+
 </html>
