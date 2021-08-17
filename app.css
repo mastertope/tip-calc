@@ -1,38 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 body {
     background-color: hsl(185, 41%, 84%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Space Mono', monospace;
 }
 
-label {
+.tip-details>label {
     display: block;
+    color: gray;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
 }
 
 .tip-table {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 960px; 
+    min-width: 297px;
+    max-width: 700px;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 20px 0 20px;
+}
+
+.tip-details {
+    max-width: 297px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px;
+}
+
+.tip-options {
+    padding-bottom: 10px;
 }
 
 .tip-perc {
     background-color: hsl(183, 100%, 15%);
-    color: white;
+    color: hsl(185, 41%, 84%);
+    font-size: 1.5em;
+    font-weight: 700;
     display: inline-block;
-    padding: 15px 35px;
-    border-radius: 10px;
-    margin: 25px 0 25px;
+    width: 75px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0px 0px;
 }
 
 .tip-input {
+    font-family: 'Space Mono', monospace;
     font-size: 24px;
+    background-color: hsl(185, 21%, 88%);
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    width: 93%;
+    padding-right: 10px;
+    text-align: right;
 }
 
+.tip-icon {
+    position: relative;
+}
 
-@media (mid-width: 900px) {
+.tip-icon2 {
+    position: relative;
+}
 
+.tip-icon>span {
+    color: rgb(150, 150, 150);
+    font-size: 1.9em;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.tip-perc:last-child {
+    background-color: hsl(185, 21%, 88%);
+    color: hsla(183, 100%, 15%, 0.61);
+}
+
+.tip-perc:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+/* /////////////////////////////////////////////////// */
+/*results*/
+.tip-results {
+    width: 297px;
+    background-color: hsl(183, 100%, 15%);
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px;
+    border-radius: 10px;
+    padding: 30px 15px 20px;
+}
+
+.tip-amount {
+    padding-left: 22px;
+}
+
+.tip-results label {
+    color: hsl(185, 41%, 84%);
+    position: relative;
+    top: 11px;
+}
+
+.tip-amount-display {
+    font-family: 'Space Mono', monospace;
+    width: 180px;
+    font-size: 3em;
+    font-weight: 700;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    position: relative;
+    left: 80px;
+    bottom: 35px;
+}
+
+.tip-label-per-person {
+    display: block;
+    font-size: 0.8em;
+    color: hsla(180, 33%, 97%, 0.575)
+}
+
+.tip-reset {
+    background-color: hsla(185, 65%, 72%, 0.452);
+    color: hsl(183, 100%, 15%);
+    font-size: 1.5em;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 50px 10px 10px;
+}
+
+.tip-reset:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+@media (max-width: 680px) {
+
+    .tip-table {
+        min-width: 310px;
+        max-width: 310px;
+        padding: 0px 0 20px;
+    }
+
+    .tip-perc {
+        width: 100px;
+        margin: 10px 6px 0px;
+    }
+
+    .tip-input {
+        width: 240px;
+        margin-left: 25px;
+    }
+
+    .tip-icon>span {
+        left: 13%;
+    }
+
+    .tip-options {
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tip-details>label {
+        position: relative;
+        left: 25px;
+    }
+
+    .tip-details>label:first-child {
+        margin-top: 10px;
+        position: relative;
+        left: 25px;
+    }
+
+    .tip-results {
+        width: 257px;
+        padding: 20px 6px 5px;
+    }
+
+    .tip-amount-display {
+        font-size: 2em;
+        width: 130px;
+        left: 80px;
+        bottom: 25px;
+    }
+
+    .tip-reset {
+        margin: 0px 10px 10px;
+    }
 }
