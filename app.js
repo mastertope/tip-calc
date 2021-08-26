@@ -12,6 +12,7 @@ const customer = document.getElementById('customer');
 const selectedTip = document.getElementById('tipOptions');
 const tipPerPerson = document.getElementById('tipPerPerson');
 const tipTotalPerPerson = document.getElementById('tipTotalPerPerson');
+const resetButton = document.getElementById('reset');
 
 bill.value = '';
 customer.value = '';
@@ -45,6 +46,21 @@ const displayValues = () => {
         '$ 0.00';
 };
 
+const reset = () => {
+
+    bill_val = 0.00;
+    customer_val = 0;
+    selectedTip_val = 0.00;
+    tipPerPerson_val = 0.00;
+    tipTotalPerPerson_val = 0.00;
+
+    bill.value = '';
+    customer.value = '';
+    tipPerPerson.value = '';
+    tipTotalPerPerson.value = '';
+
+}
+
 ////////////////////////////////////////////////////////////////
 
 
@@ -75,5 +91,7 @@ selectedTip.addEventListener('click', (e) => {
     computeTipPerPerson();
     displayValues();
 });
+
+resetButton.addEventListener('click', reset);
 
 ////////////////////////////////////////////////////////////////
