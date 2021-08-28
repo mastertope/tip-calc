@@ -30,7 +30,7 @@ const computeTip = () => {
 
 const computeTipPerPerson = () => {
     if (customer_val !== 0.00 && tipPerPerson_val !== undefined) {
-        tipTotalPerPerson_val = parseFloat((bill_val + tipPerPerson_val) / customer_val);
+        tipTotalPerPerson_val = parseFloat((bill_val + (tipPerPerson_val * customer_val)) / customer_val);
     }
 };
 
@@ -86,7 +86,7 @@ customer.addEventListener('input', () => {
 });
 
 selectedTip.addEventListener('click', (e) => {
-    selectedTip_val = parseFloat(e.target.name) ? parseFloat(e.target.name) : 0.00;
+    selectedTip_val = parseFloat(e.target.id) ? parseFloat(e.target.id) : 0.00;
     computeTip();
     computeTipPerPerson();
     displayValues();

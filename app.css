@@ -10,7 +10,7 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-body>svg {
+body> header > svg {
     min-height: 20vh;
 }
 
@@ -34,7 +34,7 @@ body>svg {
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
-    padding: 20px 0 20px;
+    padding: 20px 10px 20px;
 }
 
 .tip-details {
@@ -161,16 +161,15 @@ body>svg {
     color: hsl(183, 100%, 15%);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 700px) {
 
-    /* body>svg {
-        position: relative;
-        top: 30px;
-    } */
+    body> header > svg {
+        min-height: 13vh;
+    }
 
     .tip-table {
         min-width: 310px;
-        max-width: 375px;
+        max-width: 275px;
         padding: 0px 0 20px;
     }
 
